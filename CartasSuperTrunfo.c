@@ -6,7 +6,7 @@ float calculo_densidade(int populacao, float area_em_km){
     return populacao/area_em_km;
 }
 float pib_percapita(float pib, unsigned long int populacao){
-    return pib/ (float)populacao;
+    return pib*1000000000/ (float)populacao;
 }
 //nível mestre - super poder
 float super_poder(float populacao, float area_em_km, float pib, float pontos_turisticos, float pib_percapita){
@@ -43,7 +43,7 @@ int main() {
     printf("Digite o nome da cidade: \n");
     getchar();
     fgets(nome_da_cidade,15,stdin);
-    printf("Digite a população: \n");
+    printf("Digite a população: \n\n");
     scanf("%lu", &populacao);
     printf("Digite a área em km², da sua cidade: \n");
     scanf("%f", &area_em_km);
@@ -84,7 +84,7 @@ int main() {
     printf("Estado: %s\n", estado);
     printf("Código: %s\n", codigo_da_carta);
     printf("Nome da cidade: %s\n", nome_da_cidade);
-    printf("População: %lu de habitantes\n", populacao);
+    printf("População: %lu  habitantes\n", populacao);
     printf("Área: %.2f km²\n", area_em_km);
     printf("PIB: %f bilhões de reais\n", pib);
     printf("Número de pontos turísticos: %d \n", pontos_turisticos);
@@ -96,7 +96,7 @@ int main() {
     printf("Estado: %s\n", estado2);
     printf("Código: %s\n", codigo_da_carta2);
     printf("Nome da cidade: %s\n", nome_da_cidade2);
-    printf("População: %lu de habitantes\n", populacao2);
+    printf("População: %lu de habitantes\n\n", populacao2);
     printf("Área: %.2f km²\n", area_em_km2);
     printf("PIB: %f bilhões de reais\n", pib2);
     printf("Número de pontos turísticos: %d \n", pontos_turisticos2);
